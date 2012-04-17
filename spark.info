@@ -1,0 +1,5 @@
+name: sendgrid-mail
+version: 0.1.0
+compatibility: 2.1.0
+dependencies:
+	restclient: 2.0.0
