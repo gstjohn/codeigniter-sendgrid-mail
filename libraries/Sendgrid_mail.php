@@ -156,17 +156,17 @@ class Sendgrid_Mail
 		);
 
 		// initialize rest library
-		$this->ci->restclient->initialize(array('server' => $this->api_endpoint));
-		$this->ci->restclient->format($this->api_format);
+		$this->ci->rest->initialize(array('server' => $this->api_endpoint));
+		$this->ci->rest->format($this->api_format);
 
 		// merge credentials into data
 		$data = array_merge($creds, $data);
 
 		// post request
-		$response = $this->ci->restclient->post($url, $data);
+		$response = $this->ci->rest->post($url, $data);
 
 		// check for 5xx response codes
-        if (substr($this->ci->restclient->status(), 0, 1) == 5)
+        if (substr($this->ci->rest->status(), 0, 1) == 5)
         {
             $this->error_message = 'Access to SendGrid failed. Please try again later.';
             return FALSE;
