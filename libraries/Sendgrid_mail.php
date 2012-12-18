@@ -6,7 +6,7 @@
  * Wrapper for working with the SendGrid Mail API
  *
  * @package CodeIgniter
- * @version 0.1.0
+ * @version 0.1.2
  * @author Bold
  * @link http://hellobold.com
  */
